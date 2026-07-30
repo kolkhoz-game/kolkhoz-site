@@ -136,6 +136,23 @@ a:hover {
   border-color: var(--red);
 }
 
+.primary-nav .nav-play {
+  border: 2px solid var(--ink);
+  padding: 0.65rem 0.85rem;
+  color: var(--paper-light);
+  background: var(--red);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.primary-nav .nav-play:hover,
+.primary-nav .nav-play:focus-visible {
+  border-color: var(--ink);
+  color: var(--paper-light);
+  background: var(--red-dark);
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
 main {
   overflow-x: clip;
   overflow-y: visible;
@@ -2044,6 +2061,12 @@ main {
   .primary-nav a {
     border-bottom: 1px solid rgba(23, 21, 15, 0.25);
     padding: 13px 8px;
+  }
+
+  .primary-nav .nav-play {
+    margin-top: 8px;
+    padding: 13px;
+    text-align: center;
   }
 
   .hero-grid,
