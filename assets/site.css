@@ -719,6 +719,10 @@ main {
   scroll-margin-top: 82px;
 }
 
+.walkthrough-scroll-hold {
+  display: none;
+}
+
 .walkthrough-stage {
   position: relative;
   height: clamp(420px, 44vw, 470px);
@@ -2459,6 +2463,14 @@ main {
 
   .walk-step {
     min-height: 180px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .walkthrough-scroll-hold {
+    display: block;
+    height: calc((var(--walkthrough-step-count) - 1) * clamp(180px, 36vh, 360px));
+    pointer-events: none;
   }
 }
 

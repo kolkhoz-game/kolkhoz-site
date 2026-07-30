@@ -31,6 +31,12 @@ for (const walkthrough of walkthroughs) {
   progress.style.setProperty("--step-count", steps.length);
   walkthrough.querySelector(".walkthrough-stage")?.after(progress);
 
+  const scrollHold = document.createElement("div");
+  scrollHold.className = "walkthrough-scroll-hold";
+  scrollHold.setAttribute("aria-hidden", "true");
+  scrollHold.style.setProperty("--walkthrough-step-count", steps.length);
+  walkthrough.after(scrollHold);
+
   const buttons = steps.map((step, index) => {
     const key = step.dataset.step;
     const button = document.createElement("button");
@@ -135,6 +141,7 @@ for (const walkthrough of walkthroughs) {
       const rect = walkthrough.getBoundingClientRect();
       const top = Number.parseFloat(getComputedStyle(walkthrough).top);
       if (Math.abs(rect.top - top) < 8) return 0;
+      if (rect.top < top && rect.bottom > top + 100) return 0;
       if (direction > 0 && rect.top > top) return rect.top - top;
       if (direction < 0 && rect.top < top) return top - rect.top;
       return Number.POSITIVE_INFINITY;
@@ -153,8 +160,53 @@ for (const walkthrough of walkthroughs) {
   });
 }
 
+const wheelStepThreshold = 28;
+const wheelStepInterval = 460;
 let wheelAccumulator = 0;
 let wheelCooldownUntil = 0;
+let wheelController = null;
+let wheelTimer = null;
+let wheelReleaseController = null;
+let wheelReleaseDirection = 0;
+let wheelReleaseUntil = 0;
+
+const clearWheelQueue = () => {
+  if (wheelTimer !== null) window.clearTimeout(wheelTimer);
+  wheelTimer = null;
+  wheelController = null;
+  wheelAccumulator = 0;
+};
+
+const scheduleWheelStep = () => {
+  if (wheelTimer !== null || !wheelController || Math.abs(wheelAccumulator) < wheelStepThreshold) return;
+  const delay = Math.max(0, wheelCooldownUntil - Date.now());
+  wheelTimer = window.setTimeout(() => {
+    wheelTimer = null;
+    if (!wheelController) return;
+
+    const direction = wheelAccumulator > 0 ? 1 : -1;
+    if (!wheelController.canMove(direction)) {
+      clearWheelQueue();
+      return;
+    }
+
+    const controller = wheelController;
+    controller.pin();
+    controller.move(direction);
+    wheelAccumulator -= direction * wheelStepThreshold;
+    wheelCooldownUntil = Date.now() + wheelStepInterval;
+
+    if (!controller.canMove(direction)) {
+      wheelReleaseController = controller;
+      wheelReleaseDirection = direction;
+      wheelReleaseUntil = wheelCooldownUntil;
+      clearWheelQueue();
+      return;
+    }
+
+    scheduleWheelStep();
+  }, delay);
+};
 
 window.addEventListener(
   "wheel",
@@ -163,6 +215,21 @@ window.addEventListener(
     const delta = Math.abs(event.deltaY) >= Math.abs(event.deltaX) ? event.deltaY : event.deltaX;
     if (Math.abs(delta) < 1) return;
     const direction = delta > 0 ? 1 : -1;
+
+    if (
+      wheelReleaseController?.isPinned() &&
+      direction === wheelReleaseDirection &&
+      Date.now() < wheelReleaseUntil
+    ) {
+      event.preventDefault();
+      return;
+    }
+    if (Date.now() >= wheelReleaseUntil || direction !== wheelReleaseDirection) {
+      wheelReleaseController = null;
+      wheelReleaseDirection = 0;
+      wheelReleaseUntil = 0;
+    }
+
     const controller = walkthroughControllers
       .filter((item) => item.canMove(direction))
       .map((item) => ({ item, distance: item.captureDistance(direction) }))
@@ -170,22 +237,26 @@ window.addEventListener(
       .sort((a, b) => a.distance - b.distance)[0]?.item;
 
     if (!controller) {
-      wheelAccumulator = 0;
+      clearWheelQueue();
       return;
     }
 
     event.preventDefault();
-    if (Date.now() < wheelCooldownUntil) return;
-    wheelAccumulator += delta;
-    if (Math.abs(wheelAccumulator) < 28) return;
-
     controller.pin();
-    controller.move(direction);
-    wheelAccumulator = 0;
-    wheelCooldownUntil = Date.now() + 460;
+    if (wheelController && wheelController !== controller) clearWheelQueue();
+    wheelController = controller;
+    wheelAccumulator += Math.sign(delta) * Math.min(Math.abs(delta), wheelStepThreshold);
+    scheduleWheelStep();
   },
   { passive: false },
 );
+
+window.addEventListener("blur", () => {
+  clearWheelQueue();
+  wheelReleaseController = null;
+  wheelReleaseDirection = 0;
+  wheelReleaseUntil = 0;
+});
 
 for (const controller of walkthroughControllers) {
   let touchStartX = 0;
