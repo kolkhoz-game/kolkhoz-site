@@ -693,13 +693,31 @@
       }
 
       @media (max-width: 620px) {
+        html {
+          overflow-x: clip;
+          scroll-padding-top: 132px;
+        }
+
+        body {
+          overflow-x: clip;
+        }
+
+        .site-header-inner {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 8px 16px;
+        }
+
         .brand-name {
           font-size: 30px;
         }
 
         .nav {
-          gap: 13px;
-          font-size: 15px;
+          flex: 1 1 100%;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 6px 14px;
+          font-size: 14px;
         }
 
         body {

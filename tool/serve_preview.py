@@ -13,6 +13,18 @@ class CleanUrlHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(DOCS_ROOT), **kwargs)
 
+    def send_error(self, code, message=None, explain=None):
+        if code == 404:
+            body = (DOCS_ROOT / "404.html").read_bytes()
+            self.send_response(404)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            if self.command != "HEAD":
+                self.wfile.write(body)
+            return
+        super().send_error(code, message, explain)
+
     def translate_path(self, path: str) -> str:
         translated = Path(super().translate_path(path))
         request_path = Path(urlsplit(path).path)
