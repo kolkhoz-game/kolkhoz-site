@@ -18,6 +18,7 @@ if (toggle && nav) {
 const walkthroughs = document.querySelectorAll("[data-walkthrough]");
 const walkthroughControllers = [];
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const shortWalkthroughViewport = window.matchMedia("(min-width: 621px) and (max-height: 600px)");
 
 for (const walkthrough of walkthroughs) {
   const steps = [...walkthrough.querySelectorAll("[data-step]")];
@@ -211,7 +212,7 @@ const scheduleWheelStep = () => {
 window.addEventListener(
   "wheel",
   (event) => {
-    if (reducedMotion.matches) return;
+    if (reducedMotion.matches || shortWalkthroughViewport.matches) return;
     const delta = Math.abs(event.deltaY) >= Math.abs(event.deltaX) ? event.deltaY : event.deltaX;
     if (Math.abs(delta) < 1) return;
     const direction = delta > 0 ? 1 : -1;

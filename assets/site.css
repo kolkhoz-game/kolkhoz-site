@@ -2082,6 +2082,7 @@ main {
 
   .hero-copy {
     grid-row: 1;
+    min-width: 0;
   }
 
   .cover-card {
@@ -2176,7 +2177,7 @@ main {
   }
 
   .brand-name {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 5.3vw, 1.25rem);
   }
 
   .hero-grid {
@@ -2184,7 +2185,16 @@ main {
   }
 
   .hero .display {
-    font-size: clamp(3.8rem, 21vw, 6rem);
+    font-size: clamp(2.4rem, 17.5vw, 5.2rem);
+  }
+
+  .hero .actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero .actions .button {
+    width: 100%;
   }
 
   .fact-grid,
@@ -2486,6 +2496,22 @@ main {
 
   .walk-step {
     min-height: 180px;
+  }
+}
+
+@media (min-width: 621px) and (max-height: 600px) {
+  .walkthrough {
+    position: relative;
+    top: auto;
+    scroll-margin-top: 72px;
+  }
+
+  .walkthrough-stage {
+    height: clamp(260px, 52vh, 320px);
+  }
+
+  .walkthrough-scroll-hold {
+    display: none !important;
   }
 }
 

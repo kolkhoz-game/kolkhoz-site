@@ -119,6 +119,7 @@
 
       .theme-toggle {
         display: grid;
+        flex: 0 0 38px;
         width: 38px;
         height: 38px;
         place-items: center;
@@ -129,10 +130,16 @@
         cursor: pointer;
       }
 
-      .theme-toggle img {
-        width: 26px;
-        height: 26px;
-        object-fit: contain;
+      .theme-toggle span {
+        color: var(--gold);
+        font-size: 22px;
+        line-height: 1;
+      }
+
+      .theme-toggle:hover,
+      .theme-toggle:focus-visible {
+        border-color: var(--gold);
+        outline: 2px solid transparent;
       }
 
       html[data-theme="light"] .theme-toggle .tt-to-light {
@@ -384,11 +391,20 @@
       }
 
       @media (max-width: 620px) {
+        .site-header-inner {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 8px 16px;
+        }
+
         .brand-name {
           font-size: 30px;
         }
 
         .nav {
+          order: 3;
+          flex: 1 1 100%;
+          justify-content: center;
           gap: 13px;
           font-size: 15px;
         }
@@ -463,6 +479,16 @@
           <a href="/">Home</a>
           <a href="/about">The second edition</a>
         </nav>
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-label="Switch to light theme"
+          title="Switch to light theme"
+        >
+          <span class="tt-to-light" aria-hidden="true">☀</span>
+          <span class="tt-to-dark" aria-hidden="true">☾</span>
+        </button>
       </div>
     </header>
 
@@ -613,6 +639,14 @@
     <script>
       const themeToggle = document.getElementById("theme-toggle");
       if (themeToggle) {
+        const updateThemeToggle = () => {
+          const isLight = document.documentElement.dataset.theme === "light";
+          const label = isLight ? "Switch to dark theme" : "Switch to light theme";
+          themeToggle.setAttribute("aria-label", label);
+          themeToggle.setAttribute("title", label);
+        };
+
+        updateThemeToggle();
         themeToggle.addEventListener("click", () => {
           const toLight = document.documentElement.dataset.theme !== "light";
           if (toLight) {
@@ -623,6 +657,7 @@
           try {
             localStorage.setItem("kolkhoz-theme", toLight ? "light" : "dark");
           } catch (e) {}
+          updateThemeToggle();
         });
       }
     </script>
