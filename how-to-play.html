@@ -666,7 +666,7 @@
             <article class="panel">
               <span class="panel-number">3</span>
               <h3>What is taken?</h3>
-              <p>The player’s highest eligible cards, one card for each failed field.</p>
+              <p>Each target loses one per Medal, then the global highest once per failed field.</p>
             </article>
           </div>
 
@@ -739,7 +739,7 @@
               <div class="walk-scene" data-scene="general">
                 <span class="table-label">General case · Wheat and Sunflower fail</span>
                 <div class="general-requisition">
-                  <div class="n-counter"><strong>N = 2</strong><span>take the two highest eligible cards</span></div>
+                  <div class="n-counter"><strong>N = 2</strong><span>one loss for one Medal, then two comparisons</span></div>
                   <div class="rule-cards compact">
                     <span class="rule-card-outcome north">
                       <img class="rule-card" src="/assets/current/cards/sunflower-king.webp" alt="Sunflower King, rank 13" />
@@ -749,9 +749,9 @@
                       <img class="rule-card" src="/assets/current/cards/wheat-10.webp" alt="Wheat 10" />
                       <strong>North · 10</strong>
                     </span>
-                    <span class="rule-card-outcome">
+                    <span class="rule-card-outcome north">
                       <img class="rule-card" src="/assets/current/cards/sunflower-9.webp" alt="Sunflower 9" />
-                      <strong>Keep · 9</strong>
+                      <strong>North · 9</strong>
                     </span>
                     <span class="rule-card-outcome">
                       <img class="rule-card" src="/assets/current/cards/wheat-6.webp" alt="Wheat 6" />
@@ -775,7 +775,7 @@
                 <h3>Identify inspected players.</h3>
                 <p>
                   You hold a Medal because you won the worked trick. Every player holding one or
-                  more Medals is inspected; the number of Medals does not change N.
+                  more Medals is vulnerable, and loses one individual card per Medal.
                 </p>
               </article>
               <article class="walk-step" data-step="eligible">
@@ -788,19 +788,19 @@
               </article>
               <article class="walk-step" data-step="north">
                 <span class="walk-number">4</span>
-                <h3>Send the highest N cards North.</h3>
+                <h3>Take one highest card per Medal.</h3>
                 <p>
-                  N is 1, so your highest eligible card—the Beet King—leaves your Cellar for the
-                  North. It is out of play and no longer scores.
+                  Your highest eligible card—the Beet King—leaves your Cellar for the North before
+                  any comparison. The one competitive comparison then finds no card remaining.
                 </p>
               </article>
               <article class="walk-step" data-step="general">
                 <span class="walk-number">5</span>
-                <h3>When two fields fail, take two cards.</h3>
+                <h3>Then compare once per failed field.</h3>
                 <p>
-                  If Wheat and Sunflower fail, pool both crops together and take the highest two
-                  eligible cards overall. They do not need to come from different crops. The owner
-                  chooses between equal ranks tied at the cutoff.
+                  If Wheat and Sunflower fail, every target first loses one highest eligible card
+                  per Medal. For each failed field, targets reveal their highest remaining cards
+                  together and only the global highest goes North, including ties.
                 </p>
               </article>
             </div>
@@ -809,8 +809,9 @@
           <div class="callout">
             <h3>Hero of Labor</h3>
             <p>
-              If one player wins every trick that year, they are the Hero. The Hero is exempt and
-              every other player is inspected, whether or not those players hold Medals.
+              If one player wins every Medal that year, they are the Hero. Every other player loses
+              one highest eligible card per Hero Medal. The Hero is protected and no competitive
+              comparisons occur.
             </p>
           </div>
         </div>

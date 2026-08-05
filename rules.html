@@ -442,8 +442,8 @@
 
               <h3>2. Identify inspected players</h3>
               <p>
-                Every player holding one or more Medals is inspected. The number of Medals does
-                not change how many cards that player loses.
+                Every player holding one or more Medals is vulnerable. Their Medal count determines
+                how many individual cards they lose before competitive comparisons.
               </p>
 
               <h3>3. Build each player’s eligible pool</h3>
@@ -457,23 +457,33 @@
                 <li>The Saboteur matches every failed crop and is eligible at rank 0.</li>
               </ul>
 
-              <h3>4. Send cards North</h3>
+              <h3>4. Take the Medal losses</h3>
               <p>
-                Sort the pool by printed rank and send the player’s highest <strong>N</strong>
-                eligible cards North. If the player has fewer than N eligible cards, send all
-                eligible cards. The owner chooses between equal-ranked cards tied at the cutoff.
+                Each vulnerable player sends their highest eligible card North once per Medal they
+                hold. Recalculate after every card; an owner chooses between equally ranked cards.
+                If a player runs out of eligible cards, the remaining losses are ignored.
+              </p>
+
+              <h3>5. Resolve N competitive comparisons</h3>
+              <p>
+                For each failed field, every inspected player identifies their highest remaining
+                eligible card. Reveal all nominations together and send only the globally highest
+                nomination North, including every card tied for highest. Return lower nominations
+                face-up to their owners’ Plots, then repeat with the remaining cards. The compared
+                cards do not need to match different failed crops.
               </p>
               <p>
-                The confiscated cards do not need to represent different failed crops. If the two
-                highest eligible cards are both Wheat, both are taken.
+                An Informant makes every player join its field’s comparison using the full eligible
+                pool; resolve it first. A Party Official adds one comparison. If both share a field,
+                the same expanded group resolves that extra comparison immediately afterward.
               </p>
 
               <div class="callout">
                 <h3>Hero of Labor</h3>
                 <p>
                   A player who won every trick that year is the Hero. The Hero is exempt from
-                  requisition, and every other player is inspected instead—even players holding no
-                  Medals. Each of those players still loses up to N highest eligible cards.
+                  requisition. Every other player sends one highest eligible card North per Medal
+                  held by the Hero. No competitive comparisons occur in a Hero year.
                 </p>
               </div>
               <figure class="rule-figure">
@@ -489,13 +499,14 @@
                     <div class="rule-cards north-cards">
                       <img class="rule-card" src="/assets/current/cards/sunflower-king.webp" alt="Sunflower King sent North" />
                       <img class="rule-card" src="/assets/current/cards/wheat-10.webp" alt="Wheat 10 sent North" />
+                      <img class="rule-card" src="/assets/current/cards/sunflower-9.webp" alt="Sunflower 9 sent North" />
                     </div>
                     <strong>North</strong>
                   </div>
                 </div>
                 <figcaption>
-                  Two fields failed, so N = 2. This inspected player sends their two highest
-                  eligible cards North; the 9 and 6 remain.
+                  This player has one Medal and two fields failed. They lose the King for their
+                  Medal, then the 10 and 9 in the two competitive comparisons; the 6 remains.
                 </figcaption>
               </figure>
             </section>
@@ -595,7 +606,7 @@
                   </tr>
                   <tr>
                     <td>Requisition</td>
-                    <td>Each inspected player sends their own N highest eligible cards North.</td>
+                    <td>Lose one per Medal, then send the global highest North once per failed field.</td>
                   </tr>
                   <tr>
                     <td>Score</td>
