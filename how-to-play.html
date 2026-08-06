@@ -154,8 +154,8 @@
               <span class="panel-number">1</span>
               <h3>Build the reward piles</h3>
               <p>
-                For each crop, combine its Ace through 4 with one random hidden card of that crop
-                ranked 5 through King. Shuffle each five-card pile separately.
+                Set aside the Aces. For each crop, shuffle its 2 through 5 into a separate
+                four-card reward pile.
               </p>
             </article>
             <article class="panel">
@@ -170,8 +170,10 @@
               <span class="panel-number">3</span>
               <h3>Choose the Planner</h3>
               <p>
-                Choose a first dealer and give them the Central Planner card. Place all four Medal
-                cards beside the play area.
+                Shuffle the Aces and deal one to each Cellar. The player with the Ace of Clubs
+                moves it face-up to their Plot and becomes Planner. With three players, use the Ace
+                of Hearts if the Ace of Clubs was not dealt. Place all four Medals beside the play
+                area.
               </p>
             </article>
           </div>
@@ -180,8 +182,8 @@
             <h3>Choose the quota before dealing</h3>
             <p>
               With <strong>four players</strong>, a field needs <strong>40 hours</strong>. With
-              <strong>three players</strong>, it needs <strong>32 hours</strong>. Nothing else about
-              the deck or yearly structure changes.
+              <strong>three players</strong>, it needs <strong>32 hours</strong>; leave the undealt
+              Ace set aside. Year 4 uses a revealed Worker to determine trump.
             </p>
           </div>
         </div>
@@ -203,7 +205,7 @@
             <article class="panel">
               <span class="panel-number">1</span>
               <h3>Plan</h3>
-              <p>Deal, reveal one reward per crop, choose trump, and make any allowed swaps.</p>
+              <p>Deal, reveal rewards, let the Planner make same-crop reward swaps, set trump, and make any allowed personal swaps.</p>
             </article>
             <article class="panel">
               <span class="panel-number">2</span>
@@ -228,7 +230,7 @@
             <article class="panel">
               <span class="panel-number">6</span>
               <h3>Resolve requisition</h3>
-              <p>Failed fields determine how many eligible cards each Medal holder loses.</p>
+              <p>Medals identify vulnerable players; failed crops determine which cards are eligible.</p>
             </article>
           </div>
         </div>
@@ -241,17 +243,18 @@
             <p class="eyebrow">Year 2 · guided by Foreman Misha</p>
             <h2 class="display">Follow one decision through the whole year.</h2>
             <p class="lede">
-              Wheat is trump. You have a valuable Beet King in hand and a Wheat 10 hidden in your
-              Cellar. We will follow that swap through a trick, two possible assignments, banking,
-              and the requisition it creates.
+              The Planner turns a Wheat 3 into a Wheat King reward. You are not the Planner, so you
+              may retrieve a Wheat 10 from your Cellar. We will follow both swaps through a trick,
+              assignment, banking, and the requisition they create.
             </p>
             <nav class="lesson-index" aria-label="Worked walkthrough chapters">
               <a href="#worked-hand"><span>1</span>Your hand</a>
-              <a href="#worked-swap"><span>2</span>The swap</a>
-              <a href="#worked-trick"><span>3</span>The trick</a>
-              <a href="#worked-assignment"><span>4</span>Assignment</a>
-              <a href="#worked-bank"><span>5</span>Banking</a>
-              <a href="#requisition"><span>6</span>Requisition</a>
+              <a href="#worked-reward-swap"><span>2</span>Reward swap</a>
+              <a href="#worked-swap"><span>3</span>Your swap</a>
+              <a href="#worked-trick"><span>4</span>The trick</a>
+              <a href="#worked-assignment"><span>5</span>Assignment</a>
+              <a href="#worked-bank"><span>6</span>Banking</a>
+              <a href="#requisition"><span>7</span>Requisition</a>
             </nav>
           </div>
         </div>
@@ -270,7 +273,7 @@
             </div>
           </div>
           <div class="walkthrough" data-walkthrough>
-            <div class="walkthrough-stage" aria-label="A five-card hand and one private Cellar card">
+            <div class="walkthrough-stage" aria-label="A five-card hand and two private Cellar cards">
               <div class="walk-scene is-active" data-scene="hand">
                 <span class="table-label">Your five-card hand</span>
                 <div class="story-hand">
@@ -282,8 +285,11 @@
                 </div>
                 <div class="story-zone cellar-zone">
                   <strong>Your Cellar</strong>
-                  <img class="story-card-back" src="/assets/current/card-back.webp" alt="One face-down Cellar card" />
-                  <span>Only you may inspect it</span>
+                  <div class="stacked-backs">
+                    <img class="story-card-back" src="/assets/current/card-back.webp" alt="Face-down starting Ace" />
+                    <img class="story-card-back" src="/assets/current/card-back.webp" alt="Face-down Worker banked in Year 1" />
+                  </div>
+                  <span>Your starting Ace and a Worker banked in Year 1</span>
                 </div>
               </div>
               <div class="walk-scene" data-scene="priorities">
@@ -318,16 +324,94 @@
         </div>
       </section>
 
+      <section class="section charcoal lesson-section" id="worked-reward-swap">
+        <div class="shell">
+          <div class="lesson-heading">
+            <div>
+              <p class="eyebrow">Chapter 2 · The Planner’s reward swap</p>
+              <h2 class="display">Rewrite the plan.</h2>
+            </div>
+            <div class="misha-line">
+              <img src="/assets/foreman-misha.webp" alt="" />
+              <p><strong>Foreman Misha:</strong> “The Planner may replace each reward—but only with a card of the same crop.”</p>
+            </div>
+          </div>
+          <div class="walkthrough" data-walkthrough>
+            <div class="walkthrough-stage" aria-label="Planner exchanges a Wheat King from hand for the revealed Wheat 3 reward">
+              <div class="walk-scene is-active" data-scene="reward-reveal">
+                <span class="table-label">Wheat reward revealed</span>
+                <div class="reward-swap-board">
+                  <div class="story-zone reward-slot">
+                    <strong>Visible Wheat reward</strong>
+                    <img class="story-card selected-card" src="/assets/current/cards/wheat-3.webp" alt="Wheat 3 revealed as the reward" />
+                    <span>Available to the Brigadier who completes Wheat</span>
+                  </div>
+                  <div class="story-zone planner-zone">
+                    <strong>Planner’s hand</strong>
+                    <img class="story-card" src="/assets/current/cards/wheat-king.webp" alt="Wheat King in the Planner's hand" />
+                    <span>Same crop, so it may replace the reward</span>
+                  </div>
+                </div>
+              </div>
+              <div class="walk-scene" data-scene="reward-exchange">
+                <span class="table-label">Planner chooses the same-crop exchange</span>
+                <div class="reward-swap-board exchange">
+                  <div class="story-zone reward-slot">
+                    <strong>Reward pile</strong>
+                    <img class="story-card moving-out" src="/assets/current/cards/wheat-king.webp" alt="Wheat King moves into the reward slot" />
+                    <span>Wheat King becomes the new reward</span>
+                  </div>
+                  <span class="swap-arrow" aria-hidden="true">⇄</span>
+                  <div class="story-zone planner-zone">
+                    <strong>Planner’s hand</strong>
+                    <img class="story-card moving-in" src="/assets/current/cards/wheat-3.webp" alt="Wheat 3 moves into the Planner's hand" />
+                    <span>The revealed Wheat 3 becomes a Worker</span>
+                  </div>
+                </div>
+              </div>
+              <div class="walk-scene" data-scene="reward-result">
+                <span class="table-label">The public plan for Wheat</span>
+                <div class="reward-result-board">
+                  <img src="/assets/current/wheat.webp" alt="" />
+                  <div>
+                    <strong>Wheat King · reward</strong>
+                    <span>Face-up and claimable when Wheat reaches quota</span>
+                  </div>
+                  <img class="story-card" src="/assets/current/cards/wheat-king.webp" alt="Wheat King is now the visible Wheat reward" />
+                </div>
+              </div>
+            </div>
+            <div class="walkthrough-steps">
+              <article class="walk-step is-active" data-step="reward-reveal">
+                <span class="walk-number">1</span>
+                <h3>Reveal the Wheat 3.</h3>
+                <p>At the start of Year 2, the top card of each crop’s reward pile is revealed. Wheat begins with the Wheat 3.</p>
+              </article>
+              <article class="walk-step" data-step="reward-exchange">
+                <span class="walk-number">2</span>
+                <h3>The Planner offers the Wheat King.</h3>
+                <p>Because both cards are Wheat, the Planner may exchange them. A card of any other crop would be illegal.</p>
+              </article>
+              <article class="walk-step" data-step="reward-result">
+                <span class="walk-number">3</span>
+                <h3>The reward and hand trade places.</h3>
+                <p>The Wheat King stays face-up as the year’s Wheat reward. The Wheat 3 enters the Planner’s hand and may be played normally.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section light lesson-section" id="worked-swap">
         <div class="shell">
           <div class="lesson-heading">
             <div>
-              <p class="eyebrow">Chapter 2 · The yearly swap</p>
+              <p class="eyebrow">Chapter 3 · Your personal swap</p>
               <h2 class="display">Trade safety for leverage.</h2>
             </div>
             <div class="misha-line">
               <img src="/assets/foreman-misha.webp" alt="" />
-              <p><strong>Foreman Misha:</strong> “Beginning in Year 2, inspect your own holdings and make one optional swap.”</p>
+              <p><strong>Foreman Misha:</strong> “You are not the Planner this year, so you may make one optional personal swap.”</p>
             </div>
           </div>
           <div class="walkthrough reverse" data-walkthrough>
@@ -342,7 +426,10 @@
                   <span class="swap-arrow" aria-hidden="true">⇄</span>
                   <div class="story-zone cellar-zone">
                     <strong>Cellar</strong>
-                    <img class="story-card selected-card" src="/assets/current/cards/wheat-10.webp" alt="Wheat 10 privately inspected in the Cellar" />
+                    <div class="cellar-pair">
+                      <img class="story-card selected-card" src="/assets/current/cards/wheat-10.webp" alt="Wheat 10 privately inspected in the Cellar" />
+                      <img class="story-card-back" src="/assets/current/card-back.webp" alt="Starting Ace remains face-down in the Cellar" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -356,7 +443,10 @@
                   <span class="swap-arrow" aria-hidden="true">→</span>
                   <div class="story-zone cellar-zone">
                     <strong>Into the Cellar</strong>
-                    <img class="story-card moving-out" src="/assets/current/cards/beet-king.webp" alt="Beet King moves into the Cellar" />
+                    <div class="cellar-pair">
+                      <img class="story-card moving-out" src="/assets/current/cards/beet-king.webp" alt="Beet King moves into the Cellar" />
+                      <img class="story-card-back" src="/assets/current/card-back.webp" alt="Starting Ace stays in the Cellar" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -371,8 +461,11 @@
                 </div>
                 <div class="story-zone cellar-zone result-cellar">
                   <strong>Cellar</strong>
-                  <img class="story-card-back" src="/assets/current/card-back.webp" alt="The Beet King is now hidden face-down" />
-                  <span>You know this is the Beet King. Opponents do not.</span>
+                  <div class="stacked-backs">
+                    <img class="story-card-back" src="/assets/current/card-back.webp" alt="The Beet King is now hidden face-down" />
+                    <img class="story-card-back" src="/assets/current/card-back.webp" alt="The starting Ace remains hidden face-down" />
+                  </div>
+                  <span>The Cellar still has two cards; only you know which is the Beet King.</span>
                 </div>
               </div>
             </div>
@@ -381,8 +474,9 @@
                 <span class="walk-number">1</span>
                 <h3>Inspect only your own holdings.</h3>
                 <p>
-                  You may exchange one hand card with one card in your own Plot or Cellar. You may
-                  inspect your Cellar before choosing. Here, it contains the Wheat 10 banked last year.
+                  As a non-Planner in Year 2, you may exchange one hand card with one card in your
+                  own Plot or Cellar. Here, the Cellar contains your starting Ace and the Wheat 10
+                  banked last year.
                 </p>
               </article>
               <article class="walk-step" data-step="exchange">
@@ -397,8 +491,8 @@
                 <span class="walk-number">3</span>
                 <h3>Remember what became private.</h3>
                 <p>
-                  Everyone sees that your Cellar still contains one card, but only you know it is
-                  the Beet King. That information will matter during requisition.
+                  Everyone sees that your Cellar still contains two cards, but only you know which
+                  one is the Beet King. That information will matter during requisition.
                 </p>
                 <aside class="misha-tip">A Plot replacement stays face-up. A Cellar replacement stays face-down.</aside>
               </article>
@@ -411,7 +505,7 @@
         <div class="shell">
           <div class="lesson-heading">
             <div>
-              <p class="eyebrow">Chapter 3 · Play a trick</p>
+              <p class="eyebrow">Chapter 4 · Play a trick</p>
               <h2 class="display">Follow the lead—or use trump.</h2>
             </div>
             <div class="misha-line">
@@ -484,7 +578,7 @@
         <div class="shell">
           <div class="lesson-heading">
             <div>
-              <p class="eyebrow">Chapter 4 · Assign the work</p>
+              <p class="eyebrow">Chapter 5 · Assign the work</p>
               <h2 class="display">The trick opens jobs—not lanes.</h2>
             </div>
             <div class="misha-line">
@@ -577,8 +671,9 @@
                 <span class="walk-number">4</span>
                 <h3>The crossing Brigadier claims the reward.</h3>
                 <p>
-                  Because your assignment crosses 40, take the visible Wheat King into your Plot.
-                  The field remains open for later assignments and could still be poisoned by the Saboteur.
+                  Because your assignment crosses 40, take the Wheat King that the Planner installed
+                  as the reward into your Plot. The field remains open for later assignments and
+                  could still be poisoned by the Saboteur.
                 </p>
               </article>
             </div>
@@ -590,7 +685,7 @@
         <div class="shell">
           <div class="lesson-heading">
             <div>
-              <p class="eyebrow">Chapter 5 · The leftover card</p>
+              <p class="eyebrow">Chapter 6 · The leftover card</p>
               <h2 class="display">What survives becomes your score.</h2>
             </div>
             <div class="misha-line">
@@ -643,7 +738,7 @@
         <div class="shell">
           <div class="lesson-heading">
             <div>
-              <p class="eyebrow">Chapter 6 · After the final trick</p>
+              <p class="eyebrow">Chapter 7 · After the final trick</p>
               <h2 class="display">Resolve requisition.</h2>
             </div>
             <div class="misha-line">
@@ -655,8 +750,8 @@
           <div class="card-grid">
             <article class="panel">
               <span class="panel-number">1</span>
-              <h3>Who is inspected?</h3>
-              <p>Every player holding at least one Medal is inspected.</p>
+              <h3>Who is vulnerable?</h3>
+              <p>Every Medal holder is vulnerable—unless one player won them all and becomes the protected Hero.</p>
             </article>
             <article class="panel">
               <span class="panel-number">2</span>
@@ -666,7 +761,7 @@
             <article class="panel">
               <span class="panel-number">3</span>
               <h3>What is taken?</h3>
-              <p>Each target loses one per Medal, then the global highest once per failed field.</p>
+              <p>Each vulnerable player loses one per Medal, then the global highest once per failed field.</p>
             </article>
           </div>
 
@@ -683,12 +778,12 @@
                 <div class="n-counter"><strong>N = 1</strong><span>one failed field</span></div>
               </div>
               <div class="walk-scene" data-scene="inspected">
-                <span class="table-label">Who is inspected?</span>
+                <span class="table-label">Who is vulnerable?</span>
                 <div class="inspection-board">
                   <div class="player-badge">
                     <span class="medal-token">★<small>1 Medal</small></span>
                     <strong>You won a trick</strong>
-                    <span>You are inspected</span>
+                    <span>You are vulnerable</span>
                   </div>
                   <div class="story-zone plot-zone">
                     <strong>Your Plot</strong>
@@ -737,26 +832,50 @@
                 </div>
               </div>
               <div class="walk-scene" data-scene="general">
-                <span class="table-label">General case · Wheat and Sunflower fail</span>
-                <div class="general-requisition">
-                  <div class="n-counter"><strong>N = 2</strong><span>one loss for one Medal, then two comparisons</span></div>
-                  <div class="rule-cards compact">
-                    <span class="rule-card-outcome north">
-                      <img class="rule-card" src="/assets/current/cards/sunflower-king.webp" alt="Sunflower King, rank 13" />
-                      <strong>North · 13</strong>
-                    </span>
-                    <span class="rule-card-outcome north">
-                      <img class="rule-card" src="/assets/current/cards/wheat-10.webp" alt="Wheat 10" />
-                      <strong>North · 10</strong>
-                    </span>
-                    <span class="rule-card-outcome north">
-                      <img class="rule-card" src="/assets/current/cards/sunflower-9.webp" alt="Sunflower 9" />
-                      <strong>North · 9</strong>
-                    </span>
-                    <span class="rule-card-outcome">
-                      <img class="rule-card" src="/assets/current/cards/wheat-6.webp" alt="Wheat 6" />
-                      <strong>Keep · 6</strong>
-                    </span>
+                <span class="table-label">Global comparisons · Wheat and Sunflower fail</span>
+                <div class="comparison-board">
+                  <div class="n-counter"><strong>N = 2</strong><span>after individual Medal losses, compare twice</span></div>
+                  <div class="comparison-rounds">
+                    <section class="comparison-round">
+                      <h3>Comparison 1</h3>
+                      <div class="nomination-grid">
+                        <div class="nomination winner">
+                          <strong>You</strong>
+                          <img src="/assets/current/cards/wheat-10.webp" alt="You nominate the Wheat 10" />
+                          <span>10 · North</span>
+                        </div>
+                        <div class="nomination">
+                          <strong>Boris</strong>
+                          <img src="/assets/current/cards/sunflower-9.webp" alt="Boris nominates the Sunflower 9" />
+                          <span>9 · returns</span>
+                        </div>
+                        <div class="nomination">
+                          <strong>Clara</strong>
+                          <img src="/assets/current/cards/wheat-7.webp" alt="Clara nominates the Wheat 7" />
+                          <span>7 · returns</span>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="comparison-round">
+                      <h3>Comparison 2</h3>
+                      <div class="nomination-grid">
+                        <div class="nomination winner">
+                          <strong>You</strong>
+                          <img src="/assets/current/cards/wheat-9.webp" alt="You nominate the Wheat 9" />
+                          <span>9 · North</span>
+                        </div>
+                        <div class="nomination winner">
+                          <strong>Boris</strong>
+                          <img src="/assets/current/cards/sunflower-9.webp" alt="Boris again nominates the Sunflower 9" />
+                          <span>9 · North</span>
+                        </div>
+                        <div class="nomination">
+                          <strong>Clara</strong>
+                          <img src="/assets/current/cards/wheat-7.webp" alt="Clara again nominates the Wheat 7" />
+                          <span>7 · returns</span>
+                        </div>
+                      </div>
+                    </section>
                   </div>
                 </div>
               </div>
@@ -772,7 +891,7 @@
               </article>
               <article class="walk-step" data-step="inspected">
                 <span class="walk-number">2</span>
-                <h3>Identify inspected players.</h3>
+                <h3>Identify vulnerable players.</h3>
                 <p>
                   You hold a Medal because you won the worked trick. Every player holding one or
                   more Medals is vulnerable, and loses one individual card per Medal.
@@ -791,28 +910,45 @@
                 <h3>Take one highest card per Medal.</h3>
                 <p>
                   Your highest eligible card—the Beet King—leaves your Cellar for the North before
-                  any comparison. The one competitive comparison then finds no card remaining.
+                  any comparison. You have no eligible card left to nominate, but other vulnerable
+                  players still take part in the comparison.
                 </p>
               </article>
               <article class="walk-step" data-step="general">
                 <span class="walk-number">5</span>
                 <h3>Then compare once per failed field.</h3>
                 <p>
-                  If Wheat and Sunflower fail, every target first loses one highest eligible card
-                  per Medal. For each failed field, targets reveal their highest remaining cards
-                  together and only the global highest goes North, including ties.
+                  If Wheat and Sunflower fail, every vulnerable player first loses one highest
+                  eligible card per Medal. For each failed field, they reveal their highest
+                  remaining cards together. In the first comparison, your 10 is globally highest.
+                  In the second, both 9s tie for highest, so both go North. Clara’s lower nomination
+                  returns each time; a Cellar card would return face-down.
                 </p>
               </article>
             </div>
           </div>
 
-          <div class="callout">
-            <h3>Hero of Labor</h3>
-            <p>
-              If one player wins every Medal that year, they are the Hero. Every other player loses
-              one highest eligible card per Hero Medal. The Hero is protected and no competitive
-              comparisons occur.
-            </p>
+          <div class="callout hero-example">
+            <div>
+              <h3>Hero of Socialist Labor</h3>
+              <p>
+                If one player wins every available Medal that year, they are the Hero. The normal
+                Medal-holder losses and global comparisons are replaced by this branch.
+              </p>
+            </div>
+            <div class="hero-branch" aria-label="Hero requisition branch">
+              <div class="hero-status protected">
+                <span class="medal-token">★<small>All Medals</small></span>
+                <strong>Hero</strong>
+                <span>Protected</span>
+              </div>
+              <span class="flow-arrow" aria-hidden="true">→</span>
+              <div class="hero-status vulnerable">
+                <strong>Every other player</strong>
+                <span>Lose one highest eligible card per Hero Medal</span>
+                <small>No competitive comparisons</small>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -838,11 +974,11 @@
             <div>
               <ol>
                 <li>Deal four cards to every player.</li>
-                <li>Reveal one reward for each crop.</li>
+                <li>Do not reveal reward cards.</li>
                 <li>Reveal the top remaining Worker and immediately send it North.</li>
                 <li>That Worker’s crop is trump for Year 5.</li>
                 <li>If the revealed Worker is the Saboteur, Year 5 has no trump.</li>
-                <li>Players may make their normal Year 2–5 swap, then play three tricks.</li>
+                <li>Every player, including the Planner, may make one optional personal swap, then play three tricks.</li>
               </ol>
             </div>
           </div>
@@ -857,8 +993,8 @@
               <h2 class="display">The whole plan.</h2>
             </div>
             <p>
-              Return all Medals after requisition, send unclaimed rewards North, reshuffle every
-              assigned and undealt Worker, and pass the Planner left.
+              Return all Medals after requisition. Reshuffle unclaimed rewards with every assigned
+              and undealt Worker, then pass the Planner left.
             </p>
           </div>
           <div class="year-strip">
@@ -880,7 +1016,7 @@
             <article class="year">
               <strong>Year 4</strong>
               <h3>Last full year</h3>
-              <p>Deal 5 · 4 tricks · chosen trump · one optional swap.</p>
+              <p>Deal 5 · 4 tricks · chosen trump (revealed Worker with 3 players) · one optional swap.</p>
             </article>
             <article class="year">
               <strong>Year 5</strong>
@@ -888,6 +1024,10 @@
               <p>Deal 4 · reveal Worker for trump · 3 tricks · one optional swap.</p>
             </article>
           </div>
+          <p class="lede">
+            Beginning in Year 2, non-Planners may swap one hand card with their Plot or Cellar.
+            The Planner joins this personal swap in Year 5—or in Years 4 and 5 with three players.
+          </p>
         </div>
       </section>
 
@@ -913,8 +1053,8 @@
               <p>If scores tie, the player with more surviving cards wins.</p>
             </article>
             <article class="panel">
-              <h3>3. Shared victory</h3>
-              <p>If score and card count both tie, those players share the victory.</p>
+              <h3>3. Send tied leaders North</h3>
+              <p>If score and card count both tie, those players are sent North and the next-highest score wins.</p>
             </article>
           </div>
           <div class="actions">

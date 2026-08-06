@@ -17,6 +17,7 @@ const podkovaSource = join(
 );
 
 const cards = [
+  ["wheat", "3"],
   ["wheat", "6"],
   ["wheat", "7"],
   ["wheat", "9"],

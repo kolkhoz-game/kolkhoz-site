@@ -653,7 +653,7 @@ main {
 
 .lesson-index {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
   margin-top: 28px;
 }
@@ -1047,6 +1047,75 @@ main {
   gap: 20px;
   align-items: center;
   width: 100%;
+}
+
+.reward-swap-board {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: clamp(18px, 4vw, 42px);
+  align-items: center;
+  width: 100%;
+}
+
+.reward-swap-board.exchange {
+  grid-template-columns: minmax(180px, 1fr) auto minmax(180px, 1fr);
+}
+
+.reward-slot {
+  background: var(--mustard);
+}
+
+.planner-zone {
+  color: var(--paper-light);
+  background: var(--charcoal);
+}
+
+.reward-result-board {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr) minmax(110px, 150px);
+  gap: 24px;
+  align-items: center;
+  width: min(100%, 760px);
+  border: 3px solid var(--ink);
+  padding: clamp(18px, 4vw, 34px);
+  background: var(--mustard);
+}
+
+.reward-result-board > img:first-child {
+  width: 82px;
+}
+
+.reward-result-board strong,
+.reward-result-board span {
+  display: block;
+}
+
+.reward-result-board strong {
+  font: 900 clamp(1.25rem, 2.5vw, 2rem)/1 var(--display);
+}
+
+.reward-result-board span {
+  margin-top: 8px;
+  font-size: 0.82rem;
+}
+
+.reward-result-board .story-card {
+  width: 100%;
+}
+
+.cellar-pair {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.cellar-pair .story-card,
+.cellar-pair .story-card-back {
+  width: clamp(76px, 8vw, 112px);
+}
+
+.cellar-pair img + img {
+  margin-left: -54px;
 }
 
 .swap-arrow {
@@ -1456,6 +1525,128 @@ main {
   display: grid;
   gap: 28px;
   width: 100%;
+}
+
+.comparison-board {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+}
+
+.comparison-board .n-counter {
+  justify-self: center;
+  padding-block: 8px;
+}
+
+.comparison-board .n-counter strong {
+  font-size: 1.55rem;
+}
+
+.comparison-rounds {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+}
+
+.comparison-round {
+  border: 3px solid var(--ink);
+  padding: 10px;
+  background: var(--paper-light);
+}
+
+.comparison-round h3 {
+  margin: 0 0 9px;
+  font: 900 0.8rem/1 var(--sans);
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.nomination-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.nomination {
+  min-width: 0;
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  border: 2px solid var(--ink);
+  padding: 7px 4px;
+  background: var(--paper);
+  text-align: center;
+}
+
+.nomination.winner {
+  color: var(--paper-light);
+  background: var(--red);
+}
+
+.nomination strong,
+.nomination span {
+  font: 900 0.62rem/1.1 var(--sans);
+  text-transform: uppercase;
+}
+
+.nomination img {
+  width: min(100%, 66px);
+  filter: drop-shadow(2px 3px 0 rgba(23, 21, 15, 0.18));
+}
+
+.hero-example {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.65fr) minmax(0, 1fr);
+  gap: clamp(22px, 4vw, 44px);
+  align-items: center;
+}
+
+.hero-example h3 {
+  margin-top: 0;
+}
+
+.hero-branch {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.8fr) auto minmax(180px, 1fr);
+  gap: 14px;
+  align-items: center;
+}
+
+.hero-status {
+  min-height: 190px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 9px;
+  border: 3px solid var(--ink);
+  padding: 14px;
+  text-align: center;
+}
+
+.hero-status.protected {
+  background: var(--mustard);
+}
+
+.hero-status.vulnerable {
+  color: var(--paper-light);
+  background: var(--charcoal);
+}
+
+.hero-status > strong {
+  font: 900 1.15rem/1 var(--display);
+}
+
+.hero-status > span,
+.hero-status > small {
+  font: 800 0.72rem/1.25 var(--sans);
+}
+
+.hero-status .medal-token {
+  width: 70px;
+  height: 70px;
+  font-size: 2rem;
 }
 
 @keyframes cardMoveIn {
@@ -2325,6 +2516,43 @@ main {
     gap: 8px;
   }
 
+  .reward-swap-board,
+  .reward-swap-board.exchange {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .reward-swap-board:not(.exchange) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .reward-result-board {
+    grid-template-columns: 48px minmax(0, 1fr) 76px;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .reward-result-board > img:first-child {
+    width: 44px;
+  }
+
+  .reward-result-board strong {
+    font-size: 1rem;
+  }
+
+  .reward-result-board span {
+    font-size: 0.65rem;
+  }
+
+  .cellar-pair img + img {
+    margin-left: -42px;
+  }
+
+  .cellar-pair .story-card,
+  .cellar-pair .story-card-back {
+    width: min(20vw, 82px);
+  }
+
   .swap-arrow {
     font-size: 2rem;
   }
@@ -2413,6 +2641,46 @@ main {
   .inspection-board {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
+  }
+
+  .comparison-rounds {
+    gap: 6px;
+  }
+
+  .comparison-round {
+    padding: 6px;
+  }
+
+  .nomination-grid {
+    gap: 3px;
+  }
+
+  .nomination {
+    border-width: 1px;
+    padding: 4px 2px;
+  }
+
+  .nomination img {
+    width: min(100%, 48px);
+  }
+
+  .nomination strong,
+  .nomination span {
+    font-size: 0.5rem;
+  }
+
+  .hero-example {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-branch {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .hero-status {
+    min-height: 160px;
+    padding: 9px;
   }
 
   .player-badge {

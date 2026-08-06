@@ -174,9 +174,8 @@
               <h2 class="with-icon icon-crops">Setup</h2>
               <ol>
                 <li>
-                  For each crop, set aside its Ace, 2, 3, and 4. Randomly add one hidden card of
-                  that crop ranked 5 through King. Shuffle these five cards into a face-down reward
-                  pile beside that crop’s field.
+                  Set aside all four Aces. For each crop, shuffle its 2, 3, 4, and 5 into a
+                  separate face-down reward pile beside that crop’s field.
                 </li>
                 <li>
                   Shuffle every remaining ordinary crop card together with the Saboteur to form
@@ -187,11 +186,13 @@
                   owner may inspect its cards.
                 </li>
                 <li>Reserve a public area called the North. Cards sent there remain face-up and out of play.</li>
-                <li>Place all four Medal cards beside the play area.</li>
                 <li>
-                  Choose the first Central Planner by agreement or at random. Give that player the
-                  Planner card.
+                  Shuffle the four Aces and deal one face-down into each player’s Cellar. Reveal
+                  the Ace of Clubs, move it face-up to its owner’s Plot, and give that player the
+                  Central Planner card. If nobody received it in a three-player game, reveal and
+                  move the Ace of Hearts instead and use its owner.
                 </li>
+                <li>Place all four Medal cards beside the play area.</li>
               </ol>
               <table class="score-table">
                 <thead>
@@ -203,8 +204,7 @@
                 </tbody>
               </table>
               <p>
-                Three players use the full deck. Do not remove any additional Worker or reward
-                cards.
+                With three players, leave the one undealt Ace set aside for the rest of the game.
               </p>
               <figure class="rule-figure">
                 <div class="field-targets" aria-label="One reward pile for each crop">
@@ -214,8 +214,8 @@
                   <div class="field-target"><img src="/assets/current/beet.webp" alt="" />Beet pile</div>
                 </div>
                 <figcaption>
-                  Build four separate five-card reward piles. Everything not used in those piles
-                  becomes a Worker, together with the Saboteur.
+                  Build four separate four-card reward piles from the 2 through 5. Every card
+                  ranked 6 through King becomes a Worker, together with the Saboteur.
                 </figcaption>
               </figure>
             </section>
@@ -241,13 +241,29 @@
               <ol>
                 <li>The Planner deals five cards face-down to each player.</li>
                 <li>Reveal the top card of each crop’s reward pile beside its field.</li>
-                <li>The Planner chooses one crop as trump for the current year.</li>
+                <li>
+                  For each revealed reward, the Planner may replace it with a card of the same crop
+                  from their hand. The replaced reward joins the Planner’s hand.
+                </li>
+                <li>
+                  With four players, the Planner chooses trump in Years 1–4. With three players,
+                  the Planner chooses trump in Years 1–3; in Year 4, reveal and send North the top
+                  Worker, whose crop becomes trump. If it is the Saboteur, there is no trump.
+                </li>
               </ol>
+              <div class="callout">
+                <h3>Planner reward-swap example</h3>
+                <p>
+                  The Wheat 3 is revealed as Wheat’s reward. If the Planner holds the Wheat 9,
+                  they may make the Wheat 9 the new reward and take the Wheat 3 into their hand.
+                </p>
+              </div>
               <h3>Swapping in Years 2–5</h3>
               <p>
-                Beginning in Year 2, each player may make exactly one optional swap before the
-                first trick. Exchange one card from your hand with one card in your own Plot or
-                Cellar.
+                Beginning in Year 2, each player other than the Central Planner may make exactly
+                one optional swap before the first trick. Exchange one card from your hand with
+                one card in your own Plot or Cellar. The Planner may also swap in Year 5—or in
+                Years 4 and 5 with three players.
               </p>
               <ul>
                 <li>You may inspect your own Cellar before choosing.</li>
@@ -440,7 +456,7 @@
               </ul>
               <p>Let <strong>N</strong> equal the number of failed fields.</p>
 
-              <h3>2. Identify inspected players</h3>
+              <h3>2. Identify vulnerable players</h3>
               <p>
                 Every player holding one or more Medals is vulnerable. Their Medal count determines
                 how many individual cards they lose before competitive comparisons.
@@ -448,7 +464,7 @@
 
               <h3>3. Build each player’s eligible pool</h3>
               <p>
-                Resolve inspected players separately. Pool every card in that player’s Plot and
+                Resolve vulnerable players separately. Pool every card in that player’s Plot and
                 Cellar whose crop matches at least one failed field.
               </p>
               <ul>
@@ -466,24 +482,20 @@
 
               <h3>5. Resolve N competitive comparisons</h3>
               <p>
-                For each failed field, every inspected player identifies their highest remaining
+                For each failed field, every vulnerable player identifies their highest remaining
                 eligible card. Reveal all nominations together and send only the globally highest
-                nomination North, including every card tied for highest. Return lower nominations
-                face-up to their owners’ Plots, then repeat with the remaining cards. The compared
-                cards do not need to match different failed crops.
-              </p>
-              <p>
-                An Informant makes every player join its field’s comparison using the full eligible
-                pool; resolve it first. A Party Official adds one comparison. If both share a field,
-                the same expanded group resolves that extra comparison immediately afterward.
+                nomination North, including every card tied for highest. Cards revealed from a
+                Cellar but not sent North return face-down to that Cellar. Repeat with the remaining
+                cards; compared cards do not need to match different failed crops.
               </p>
 
               <div class="callout">
-                <h3>Hero of Labor</h3>
+                <h3>Hero of Socialist Labor</h3>
                 <p>
-                  A player who won every trick that year is the Hero. The Hero is exempt from
-                  requisition. Every other player sends one highest eligible card North per Medal
-                  held by the Hero. No competitive comparisons occur in a Hero year.
+                  If one player won every Medal available that year, that player is the Hero and is
+                  exempt from requisition. Every other player becomes vulnerable and sends one
+                  highest eligible card North per Medal held by the Hero. No competitive
+                  comparisons occur in a Hero year.
                 </p>
               </div>
               <figure class="rule-figure">
@@ -506,7 +518,8 @@
                 </div>
                 <figcaption>
                   This player has one Medal and two fields failed. They lose the King for their
-                  Medal, then the 10 and 9 in the two competitive comparisons; the 6 remains.
+                  Medal. Assuming their 10 and 9 are also the highest nominations across all
+                  vulnerable players, those cards go North in the two comparisons; the 6 remains.
                 </figcaption>
               </figure>
             </section>
@@ -516,10 +529,9 @@
               <h2 class="with-icon icon-card">End-of-year cleanup</h2>
               <ol>
                 <li>Return all four Medals to the shared supply.</li>
-                <li>Send every unclaimed visible reward North.</li>
                 <li>
-                  Reshuffle every assigned and undealt Worker, including the Saboteur if it remains
-                  available, to form the next year’s Workers Deck.
+                  Gather every assigned Worker, every unclaimed reward, and every undealt Worker.
+                  Shuffle them together to form the next year’s Workers Deck.
                 </li>
                 <li>
                   Do not reshuffle cards in Plots, Cellars, or the North. Claimed rewards and
@@ -535,13 +547,13 @@
               <ol>
                 <li>Flip the Central Planner card to its Year 5 side.</li>
                 <li>Deal four cards to each player.</li>
-                <li>Reveal one reward for each crop.</li>
-                <li>Reveal the top remaining Worker and immediately send it North.</li>
+                <li>Do not reveal reward cards in Year 5.</li>
+                <li>Reveal the top Worker and immediately send it North.</li>
                 <li>
                   The revealed Worker’s crop becomes trump. If it is the Saboteur, there is no
                   trump for Year 5.
                 </li>
-                <li>Each player may make the usual optional swap.</li>
+                <li>Every player, including the Planner, may make one optional personal swap.</li>
                 <li>Play three tricks, then bank the remaining card and resolve requisition normally.</li>
               </ol>
               <figure class="rule-figure">
@@ -573,7 +585,10 @@
                 </li>
                 <li>The player with the highest total wins.</li>
                 <li>If tied, the tied player with more total cards in their Plot and Cellar wins.</li>
-                <li>If score and card count are both tied, those players share the victory.</li>
+                <li>
+                  If score and card count are both tied, send those tied players North. The player
+                  with the next-highest score wins.
+                </li>
               </ol>
               <div class="callout dark">
                 <h3>Medals do not score.</h3>
@@ -606,11 +621,11 @@
                   </tr>
                   <tr>
                     <td>Requisition</td>
-                    <td>Lose one per Medal, then send the global highest North once per failed field.</td>
+                    <td>Lose one eligible card per Medal, then compare once per failed field. A Hero year replaces both steps.</td>
                   </tr>
                   <tr>
                     <td>Score</td>
-                    <td>Total printed ranks in Plot + Cellar; then most cards; then shared victory.</td>
+                    <td>Total printed ranks in Plot + Cellar; then most cards; tied leaders are sent North.</td>
                   </tr>
                 </tbody>
               </table>
@@ -625,8 +640,8 @@
               <h2>The app</h2>
               <p>
                 The digital game currently has four seats and therefore always uses the 40-hour
-                quota. Its rules engine automates the same default sequence and edge cases
-                described above.
+                quota. It automates its own setup and bookkeeping; the rules above govern the
+                physical base game.
               </p>
             </section>
           </div>
