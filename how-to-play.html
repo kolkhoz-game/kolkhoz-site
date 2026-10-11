@@ -103,11 +103,11 @@
           <div class="card-grid">
             <article class="panel olive">
               <h3>Plot</h3>
-              <p>Face-up claimed rewards. Everyone can see their crops and ranks.</p>
+              <p>Face-up scoring cards, including claimed rewards and the first Planner’s Ace. Everyone can see their crops and ranks.</p>
             </article>
             <article class="panel charcoal">
               <h3>Cellar</h3>
-              <p>Face-down banked Workers. Only their owner may inspect them.</p>
+              <p>Face-down scoring cards, starting with an Ace unless you are the first Planner. Only their owner may inspect them.</p>
             </article>
             <article class="panel mustard">
               <h3>The North</h3>
@@ -162,7 +162,7 @@
               <span class="panel-number">2</span>
               <h3>Build the Workers Deck</h3>
               <p>
-                Shuffle every remaining ordinary card together with the Saboteur. Place this deck
+                Shuffle the 6 through King of every crop together with the Saboteur: 33 cards. Place this deck
                 within reach of the Central Planner.
               </p>
             </article>
@@ -170,9 +170,9 @@
               <span class="panel-number">3</span>
               <h3>Choose the Planner</h3>
               <p>
-                Shuffle the Aces and deal one to each Cellar. The player with the Ace of Clubs
+                Shuffle the Aces and deal one face-down to each Cellar. The player with the Ace of Beet
                 moves it face-up to their Plot and becomes Planner. With three players, use the Ace
-                of Hearts if the Ace of Clubs was not dealt. Place all four Medals beside the play
+                of Wheat if the Ace of Beet was not dealt. Place all four Medals beside the play
                 area.
               </p>
             </article>
@@ -182,8 +182,10 @@
             <h3>Choose the quota before dealing</h3>
             <p>
               With <strong>four players</strong>, a field needs <strong>40 hours</strong>. With
-              <strong>three players</strong>, it needs <strong>32 hours</strong>; leave the undealt
-              Ace set aside. Year 4 uses a revealed Worker to determine trump.
+              <strong>three players</strong>, it needs <strong>32 hours</strong>; send the undealt
+              Ace North face-up. In Year 4, reveal a Worker for trump, skip Planner reward swaps,
+              and let the Planner go first in the hand swap. Still deal five cards, play four tricks,
+              and reveal four rewards.
             </p>
           </div>
         </div>
@@ -205,7 +207,7 @@
             <article class="panel">
               <span class="panel-number">1</span>
               <h3>Plan</h3>
-              <p>Deal, reveal rewards, let the Planner make same-crop reward swaps, set trump, and make any allowed personal swaps.</p>
+              <p>Deal, reveal rewards in Years 1–4, make permitted Planner reward swaps, set trump, and make allowed hand swaps. Year 5 has no rewards.</p>
             </article>
             <article class="panel">
               <span class="panel-number">2</span>
@@ -220,7 +222,7 @@
             <article class="panel">
               <span class="panel-number">4</span>
               <h3>Complete fields</h3>
-              <p>When a field reaches quota, the Brigadier who crossed it claims the reward.</p>
+              <p>When a field reaches quota in Years 1–4, the Brigadier who crossed it claims the reward. Year 5 fields are still worked and can fail.</p>
             </article>
             <article class="panel">
               <span class="panel-number">5</span>
@@ -390,12 +392,12 @@
               <article class="walk-step" data-step="reward-exchange">
                 <span class="walk-number">2</span>
                 <h3>The Planner offers the Wheat King.</h3>
-                <p>Because both cards are Wheat, the Planner may exchange them. A card of any other crop would be illegal.</p>
+                <p>Because both cards are Wheat, the Planner may exchange them. A card of another crop would be illegal, except the Saboteur, which counts as every crop. Each field allows at most one reward swap. With three players, skip reward swaps in Year 4.</p>
               </article>
               <article class="walk-step" data-step="reward-result">
                 <span class="walk-number">3</span>
                 <h3>The reward and hand trade places.</h3>
-                <p>The Wheat King stays face-up as the year’s Wheat reward. The Wheat 3 enters the Planner’s hand and may be played normally.</p>
+                <p>The Wheat King stays face-up on top of the pile as the year’s Wheat reward. The Wheat 3 enters the Planner’s hand and may be played normally.</p>
               </article>
             </div>
           </div>
@@ -475,7 +477,7 @@
                 <h3>Inspect only your own holdings.</h3>
                 <p>
                   As a non-Planner in Year 2, you may exchange one hand card with one card in your
-                  own Plot or Cellar. Here, the Cellar contains your starting Ace and the Wheat 10
+                  own Plot or Cellar. Here, the Cellar contains your starting Sunflower Ace and the Wheat 10
                   banked last year.
                 </p>
               </article>
@@ -549,7 +551,8 @@
                 <span class="walk-number">1</span>
                 <h3>Beet 8 leads the trick.</h3>
                 <p>
-                  Every later player must play Beet if able. The other two opponents follow with
+                  Play continues clockwise, one card each. Follow Beet if able (the Saboteur may always
+                  be played). The other two opponents follow with
                   Beet 9 and Beet 6.
                 </p>
               </article>
@@ -656,7 +659,8 @@
                 <h3>You may split the trick.</h3>
                 <p>
                   Assign the Wheat 10 to Wheat and the three Beet cards to Beet. Cards are assigned
-                  one at a time and may be divided between legal jobs.
+                  one at a time and may be divided between legal jobs. Assigned Workers stay face-up,
+                  making every field’s total public.
                 </p>
               </article>
               <article class="walk-step" data-step="flexible">
@@ -724,11 +728,11 @@
             <p class="eyebrow">Rank 0 · every crop</p>
             <h2 class="display">The Saboteur</h2>
             <ul>
-              <li>It is always considered able to follow the led crop.</li>
+              <li>You may always play it, even with other cards of the led crop. You must play it when it is your only card matching that crop.</li>
               <li>It is trump in every suit: it beats nontrumps, but every ordinary trump beats it.</li>
-              <li>If it leads, there is no ordinary lead crop; every player may play any card.</li>
+              <li>If it leads, every player may play any card; the Saboteur wins unless a trump is played.</li>
               <li>It makes all four fields legal assignment targets and contributes 0 hours.</li>
-              <li>A field containing it fails requisition even after reaching quota and paying a reward.</li>
+              <li>A field with it assigned as a Worker fails requisition even after reaching quota and paying a reward. As a reward, it scores 0 and does not make the field fail.</li>
             </ul>
           </div>
         </div>
@@ -751,20 +755,24 @@
             <article class="panel">
               <span class="panel-number">1</span>
               <h3>Who is vulnerable?</h3>
-              <p>Every Medal holder is vulnerable—unless one player won them all and becomes the protected Hero.</p>
+              <p>Every Medal holder is vulnerable. If one player won them all, everyone is vulnerable, including that Hero.</p>
             </article>
             <article class="panel">
               <span class="panel-number">2</span>
               <h3>What is eligible?</h3>
-              <p>Every Plot or Cellar card matching any failed crop, including claimed rewards.</p>
+              <p>Every Plot or Cellar card matching any failed crop, including claimed rewards and the card just banked. A stored Saboteur is eligible at rank 0 whenever any field fails.</p>
             </article>
             <article class="panel">
               <span class="panel-number">3</span>
               <h3>What is taken?</h3>
-              <p>Each vulnerable player loses one per Medal, then the global highest once per failed field.</p>
+              <p>Each vulnerable player sends one highest eligible card North per Medal and returns their Medals. With a Hero, everyone uses the Hero’s starting Medal count.</p>
             </article>
           </div>
 
+          <p>Resolve requisition in turn order, starting to the Planner’s left. If no field failed,
+            nobody loses anything. With no eligible card, nothing is lost for that Medal. Cellars
+            stay hidden except for cards sent North; players are trusted to send their true highest
+            eligible card. Return all Medals once requisition is finished.</p>
           <div class="walkthrough requisition-walkthrough" data-walkthrough>
             <div class="walkthrough-stage" aria-label="Worked requisition from failed fields to cards sent North">
               <div class="walk-scene is-active" data-scene="failed">
@@ -775,9 +783,9 @@
                   <div class="safe"><img src="/assets/current/potato.webp" alt="" /><strong>Potato</strong><span>40 · complete</span></div>
                   <div class="failed"><img src="/assets/current/beet.webp" alt="" /><strong>Beet</strong><span>31 · failed</span></div>
                 </div>
-                <div class="n-counter"><strong>N = 1</strong><span>one failed field</span></div>
+                <div class="n-counter"><strong>Beet</strong><span>the eligible crop</span></div>
               </div>
-              <div class="walk-scene" data-scene="inspected">
+              <div class="walk-scene" data-scene="vulnerable">
                 <span class="table-label">Who is vulnerable?</span>
                 <div class="inspection-board">
                   <div class="player-badge">
@@ -792,8 +800,9 @@
                   <div class="story-zone cellar-zone">
                     <strong>Your Cellar</strong>
                     <div class="stacked-backs">
-                      <img class="story-card-back" src="/assets/current/card-back.webp" alt="Face-down Cellar card" />
-                      <img class="story-card-back" src="/assets/current/card-back.webp" alt="Face-down Cellar card" />
+                      <img class="story-card-back" src="/assets/current/card-back.webp" alt="Face-down starting Sunflower Ace" />
+                      <img class="story-card-back" src="/assets/current/card-back.webp" alt="Face-down Beet King" />
+                      <img class="story-card-back" src="/assets/current/card-back.webp" alt="Face-down banked Potato Jack" />
                     </div>
                   </div>
                 </div>
@@ -832,50 +841,25 @@
                 </div>
               </div>
               <div class="walk-scene" data-scene="general">
-                <span class="table-label">Global comparisons · Wheat and Sunflower fail</span>
+                <span class="table-label">Two Medals · Wheat and Sunflower fail</span>
                 <div class="comparison-board">
-                  <div class="n-counter"><strong>N = 2</strong><span>after individual Medal losses, compare twice</span></div>
-                  <div class="comparison-rounds">
-                    <section class="comparison-round">
-                      <h3>Comparison 1</h3>
-                      <div class="nomination-grid">
-                        <div class="nomination winner">
-                          <strong>You</strong>
-                          <img src="/assets/current/cards/wheat-10.webp" alt="You nominate the Wheat 10" />
-                          <span>10 · North</span>
-                        </div>
-                        <div class="nomination">
-                          <strong>Boris</strong>
-                          <img src="/assets/current/cards/sunflower-9.webp" alt="Boris nominates the Sunflower 9" />
-                          <span>9 · returns</span>
-                        </div>
-                        <div class="nomination">
-                          <strong>Clara</strong>
-                          <img src="/assets/current/cards/wheat-7.webp" alt="Clara nominates the Wheat 7" />
-                          <span>7 · returns</span>
-                        </div>
-                      </div>
-                    </section>
-                    <section class="comparison-round">
-                      <h3>Comparison 2</h3>
-                      <div class="nomination-grid">
-                        <div class="nomination winner">
-                          <strong>You</strong>
-                          <img src="/assets/current/cards/wheat-9.webp" alt="You nominate the Wheat 9" />
-                          <span>9 · North</span>
-                        </div>
-                        <div class="nomination winner">
-                          <strong>Boris</strong>
-                          <img src="/assets/current/cards/sunflower-9.webp" alt="Boris again nominates the Sunflower 9" />
-                          <span>9 · North</span>
-                        </div>
-                        <div class="nomination">
-                          <strong>Clara</strong>
-                          <img src="/assets/current/cards/wheat-7.webp" alt="Clara again nominates the Wheat 7" />
-                          <span>7 · returns</span>
-                        </div>
-                      </div>
-                    </section>
+                  <div class="n-counter"><strong>2 Medals</strong><span>send your two highest eligible cards North</span></div>
+                  <div class="nomination-grid">
+                    <div class="nomination winner">
+                      <strong>First Medal</strong>
+                      <img src="/assets/current/cards/wheat-10.webp" alt="Wheat 10 sent North for the first Medal" />
+                      <span>10 · North</span>
+                    </div>
+                    <div class="nomination winner">
+                      <strong>Second Medal</strong>
+                      <img src="/assets/current/cards/sunflower-9.webp" alt="Sunflower 9 sent North for the second Medal" />
+                      <span>9 · North</span>
+                    </div>
+                    <div class="nomination">
+                      <strong>Keep</strong>
+                      <img src="/assets/current/cards/wheat-7.webp" alt="Wheat 7 stays with its owner" />
+                      <span>7 · remains</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -883,13 +867,13 @@
             <div class="walkthrough-steps">
               <article class="walk-step is-active" data-step="failed">
                 <span class="walk-number">1</span>
-                <h3>Count failed fields.</h3>
+                <h3>Identify failed fields.</h3>
                 <p>
                   Beet finishes below quota, while Wheat, Sunflower, and Potato complete. One field
-                  failed, so <strong>N = 1</strong>.
+                  failed, so Beet cards are eligible.
                 </p>
               </article>
-              <article class="walk-step" data-step="inspected">
+              <article class="walk-step" data-step="vulnerable">
                 <span class="walk-number">2</span>
                 <h3>Identify vulnerable players.</h3>
                 <p>
@@ -902,27 +886,25 @@
                 <h3>Build your own eligible pool.</h3>
                 <p>
                   Check your Plot and Cellar for cards matching any failed crop. The Wheat King and
-                  Potato Jack are safe. The hidden Beet King from your swap is eligible.
+                  Potato Jack are safe, as is your starting Sunflower Ace. The hidden Beet King from your swap is eligible.
                 </p>
               </article>
               <article class="walk-step" data-step="north">
                 <span class="walk-number">4</span>
                 <h3>Take one highest card per Medal.</h3>
                 <p>
-                  Your highest eligible card—the Beet King—leaves your Cellar for the North before
-                  any comparison. You have no eligible card left to nominate, but other vulnerable
-                  players still take part in the comparison.
+                  Your highest eligible card—the Beet King—is revealed and sent North from your Cellar.
+                  If you have more Medals but no eligible cards left, you lose nothing for those Medals.
                 </p>
               </article>
               <article class="walk-step" data-step="general">
                 <span class="walk-number">5</span>
-                <h3>Then compare once per failed field.</h3>
+                <h3>Repeat for each Medal.</h3>
                 <p>
-                  If Wheat and Sunflower fail, every vulnerable player first loses one highest
-                  eligible card per Medal. For each failed field, they reveal their highest
-                  remaining cards together. In the first comparison, your 10 is globally highest.
-                  In the second, both 9s tie for highest, so both go North. Clara’s lower nomination
-                  returns each time; a Cellar card would return face-down.
+                  In a separate example, Wheat and Sunflower fail and you have two Medals. Send your highest eligible card,
+                  the Wheat 10, North. Your highest remaining eligible card,
+                  the Sunflower 9, goes North for the second Medal. Keep the Wheat 7. If your
+                  highest eligible cards tie, you choose which to send.
                 </p>
               </article>
             </div>
@@ -930,23 +912,24 @@
 
           <div class="callout hero-example">
             <div>
-              <h3>Hero of Socialist Labor</h3>
+              <h3>Hero of Labor</h3>
               <p>
-                If one player wins every available Medal that year, they are the Hero. The normal
-                Medal-holder losses and global comparisons are replaced by this branch.
+                If one player wins every trick—four Medals, or three in Year 5—they are the Hero. Every player,
+                including the Hero, loses one highest eligible card per Medal the Hero held at the
+                start of requisition. Only the Hero has Medals to return.
               </p>
             </div>
             <div class="hero-branch" aria-label="Hero requisition branch">
-              <div class="hero-status protected">
+              <div class="hero-status vulnerable">
                 <span class="medal-token">★<small>All Medals</small></span>
                 <strong>Hero</strong>
-                <span>Protected</span>
+                <span>Lose one highest eligible card per Medal</span>
               </div>
               <span class="flow-arrow" aria-hidden="true">→</span>
               <div class="hero-status vulnerable">
                 <strong>Every other player</strong>
                 <span>Lose one highest eligible card per Hero Medal</span>
-                <small>No competitive comparisons</small>
+                <small>Use the Hero’s starting Medal count</small>
               </div>
             </div>
           </div>
@@ -978,7 +961,7 @@
                 <li>Reveal the top remaining Worker and immediately send it North.</li>
                 <li>That Worker’s crop is trump for Year 5.</li>
                 <li>If the revealed Worker is the Saboteur, Year 5 has no trump.</li>
-                <li>Every player, including the Planner, may make one optional personal swap, then play three tricks.</li>
+                <li>Every player may make one optional hand swap, starting with the Planner and continuing left, then play three tricks.</li>
               </ol>
             </div>
           </div>
@@ -993,40 +976,43 @@
               <h2 class="display">The whole plan.</h2>
             </div>
             <p>
-              Return all Medals after requisition. Reshuffle unclaimed rewards with every assigned
-              and undealt Worker, then pass the Planner left.
+              Return all Medals after requisition. Send unclaimed rewards North. Reshuffle every card
+              assigned to a field (including any swapped-in Ace or 2–5) with every undealt Worker.
+              Reset fields to 0 and pass the Planner left.
             </p>
           </div>
           <div class="year-strip">
             <article class="year">
               <strong>Year 1</strong>
               <h3>First sowing</h3>
-              <p>Deal 5 · 4 tricks · Planner chooses trump · no swap.</p>
+              <p>Deal 5 · 4 tricks · Planner chooses trump · non-Planners may swap.</p>
             </article>
             <article class="year">
               <strong>Year 2</strong>
-              <h3>Swaps begin</h3>
-              <p>Deal 5 · 4 tricks · chosen trump · one optional swap.</p>
+              <h3>Second sowing</h3>
+              <p>Deal 5 · 4 tricks · Planner chooses trump · non-Planners may swap.</p>
             </article>
             <article class="year">
               <strong>Year 3</strong>
               <h3>Mid-plan</h3>
-              <p>Deal 5 · 4 tricks · chosen trump · one optional swap.</p>
+              <p>Deal 5 · 4 tricks · Planner chooses trump · non-Planners may swap.</p>
             </article>
             <article class="year">
               <strong>Year 4</strong>
               <h3>Last full year</h3>
-              <p>Deal 5 · 4 tricks · chosen trump (revealed Worker with 3 players) · one optional swap.</p>
+              <p>Deal 5 · 4 tricks · 4 players: chosen trump, non-Planners may swap. With 3 players: revealed trump, no reward swaps, everyone may hand swap.</p>
             </article>
             <article class="year">
               <strong>Year 5</strong>
               <h3>Famine</h3>
-              <p>Deal 4 · reveal Worker for trump · 3 tricks · one optional swap.</p>
+              <p>Deal 4 · reveal Worker for trump · 3 tricks · no rewards · everyone may hand swap.</p>
             </article>
           </div>
           <p class="lede">
-            Beginning in Year 2, non-Planners may swap one hand card with their Plot or Cellar.
-            The Planner joins this personal swap in Year 5—or in Years 4 and 5 with three players.
+            Beginning in Year 1, non-Planners may swap one hand card with their Plot or Cellar,
+            starting to the Planner’s left and continuing clockwise. The Planner joins and goes first
+            in Year 5—or in Years 4 and 5 with three players. Planner reward swaps happen before
+            trump is chosen in Years 1–4 with four players, or Years 1–3 with three.
           </p>
         </div>
       </section>
@@ -1054,7 +1040,7 @@
             </article>
             <article class="panel">
               <h3>3. Send tied leaders North</h3>
-              <p>If score and card count both tie, those players are sent North and the next-highest score wins.</p>
+              <p>If score and card count both tie, those players are sent North for greed and the next-highest score wins. If every player is tied, nobody wins.</p>
             </article>
           </div>
           <div class="actions">
